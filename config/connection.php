@@ -1,5 +1,5 @@
 <?php
-
+/*
 // Obtener la URL de la base de datos de JawsDB
 $ja_db_url = parse_url(getenv("mysql://o8l08wdj2lb4aln7:z3rktxwx69gztd1r@ofcmikjy9x4lroa2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/t4prq68eg58nlli7"));
 
@@ -17,5 +17,19 @@ $conn = new mysqli($host, $user, $password, $dbname, $port);
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
    
-}  
+}  */
+
+
+$url = parse_url(getenv("JAWSDB_URL"));
+
+$host = $url["host"];
+$user = $url["user"];
+$password = $url["pass"];
+$dbname = substr($url["path"], 1); // Quita la barra inicial
+
+$conn = mysqli_connect($host, $user, $password, $dbname);
+
+if (!$conn) {
+    die("Error de conexión: " . mysqli_connect_error());
+}
 ?>
