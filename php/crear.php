@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <div class="d-grid">
                     <button type="submit" class="btn btn-success">Guardar Producto</button>
-                    <a href="index.php" class="btn btn-secondary mt-2">Volver</a>
+                    <a href="/index.php" class="btn btn-secondary mt-2">Volver</a>
                 </div>
             </form>
         </div>

@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = mysqli_query($conn, $query);
 
     if ($result) {
-        header("Location: index.php?mensaje=Producto actualizado correctamente");
+        header("Location: /index.php?mensaje=Producto actualizado correctamente");
         exit();
     } else {
         echo "Error al actualizar el producto: " . mysqli_error($conn);
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 <div class="d-grid">
                     <button type="submit" class="btn btn-primary">Actualizar Producto</button>
-                    <a href="index.php" class="btn btn-secondary mt-2">Cancelar</a>
+                    <a href="/index.php" class="btn btn-secondary mt-2">Cancelar</a>
                 </div>
             </form>
         </div>

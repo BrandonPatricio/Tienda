@@ -42,8 +42,8 @@ if (!$result) {
                         <td><?php echo "$" . number_format($row['precio'], 2); ?></td>
                         <td><?php echo $row['stock']; ?></td>
                         <td>
-                            <a href="editar.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
-                            <a href="eliminar.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este producto?');">Eliminar</a>
+                            <a href="/php/editar.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
+                            <a href="/php/eliminar.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este producto?');">Eliminar</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
@@ -51,7 +51,7 @@ if (!$result) {
         </table>
 
         <div class="text-center mt-3">
-            <a href="crear.php" class="btn btn-success">Añadir Nuevo Producto</a>
+            <a href="/php/crear.php" class="btn btn-success">Añadir Nuevo Producto</a>
         </div>
     </div>
 
