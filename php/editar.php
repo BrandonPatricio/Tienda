@@ -3,7 +3,7 @@ include '../config/connection.php'; // Conexión a la base de datos
 
 // Verifica si se recibió un ID en la URL
 if (!isset($_GET['id'])) {
-    header("Location: ../index.php?mensaje=ID no válido");
+    header("Location: /index.php?mensaje=ID no válido");
     exit();
 }
 
@@ -15,7 +15,7 @@ $result = mysqli_query($conn, $query);
 $producto = mysqli_fetch_assoc($result);
 
 if (!$producto) {
-    header("Location: index.php?mensaje=Producto no encontrado");
+    header("Location: /index.php?mensaje=Producto no encontrado");
     exit();
 }
 

@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = mysqli_query($conn, $query);
 
     if ($result) {
-        header("Location: index.php?mensaje=Producto agregado correctamente");
+        header("Location: /index.php?mensaje=Producto agregado correctamente");
         exit();
     } else {
         echo "Error al agregar el producto: " . mysqli_error($conn);
