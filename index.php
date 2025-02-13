@@ -43,7 +43,7 @@ if (!$result) {
                         <td><?php echo $row['stock']; ?></td>
                         <td>
                             <a href="php/editar.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">Editar</a>
-                            <a href="php/eliminar.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este producto?');">Eliminar</a>
+                            <a href="php/eliminr.php?id=<?php echo $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de eliminar este producto?');">Eliminar</a>
                         </td>
                     </tr>
                 <?php endwhile; ?>
